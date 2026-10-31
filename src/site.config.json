@@ -1,0 +1,78 @@
+{
+  "site": {
+    "name": "أحمد شريف | أوراكل أبيكس والذكاء الاصطناعي",
+    "logoText": "Ahmed D. Sherif",
+    "favicon": "/favicon.ico",
+    "keywords": {
+      "ar": [
+        "أوراكل أبيكس",
+        "Oracle APEX",
+        "ذكاء اصطناعي",
+        "AI Agents",
+        "SQLcl",
+        "قواعد بيانات أوراكل",
+        "أحمد شريف"
+      ],
+      "en": [
+        "Oracle APEX",
+        "AI Coding Agents",
+        "SQLcl",
+        "Oracle Database",
+        "Enterprise Workflows",
+        "Ahmed D. Sherif"
+      ]
+    }
+  },
+  "author": {
+    "name": {
+      "ar": "أحمد شريف (Ahmed D. Sherif)",
+      "en": "Ahmed D. Sherif"
+    },
+    "handle": "ash2osh",
+    "github": "https://github.com/ash2osh"
+  },
+  "navigation": [
+    {
+      "label": "nav.home",
+      "url": "/"
+    },
+    {
+      "label": "nav.posts",
+      "url": "/posts/"
+    },
+    {
+      "label": "nav.about",
+      "url": "/about/"
+    }
+  ],
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "label": "",
+      "icon": "icon-[simple-icons--github]",
+      "url": "https://github.com/ash2osh"
+    },
+    {
+      "name": "YouTube",
+      "label": "YouTube",
+      "icon": "icon-[simple-icons--youtube]",
+      "url": "https://youtube.com/@orochimaruASH"
+    },
+    {
+      "name": "LinkedIn",
+      "label": "LinkedIn",
+      "icon": "icon-[simple-icons--linkedin]",
+      "url": "https://www.linkedin.com/in/ahmed-d-sherif"
+    },
+    {
+      "name": "RSS",
+      "label": "common.rss",
+      "icon": "icon-[lucide--rss]",
+      "url": "/rss.xml"
+    }
+  ],
+  "text": {
+    "ar": {},
+    "en": {}
+  }
+}
