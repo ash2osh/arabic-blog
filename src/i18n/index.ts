@@ -13,6 +13,8 @@ export const defaultLanguage: Language = "ar";
 export const locales = { ar: "ar-EG", en: "en-US" } as const;
 export const ogLocales = { ar: "ar_EG", en: "en_US" } as const;
 
+const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+
 export const isLanguage = (value: unknown): value is Language =>
   languages.some((language) => language === value);
 
@@ -20,19 +22,22 @@ export function getLanguage(value?: string): Language {
   return isLanguage(value) ? value : defaultLanguage;
 }
 export function getLanguageFromPath(pathname: string): Language {
-  return getLanguage(pathname.split("/")[1]);
+  const withoutBase = pathname.startsWith(BASE) ? pathname.slice(BASE.length) : pathname;
+  return getLanguage(withoutBase.split("/")[1]);
 }
 // "/en/posts/" -> "/posts/"
 export function stripLanguage(pathname: string): string {
-  const [, first, ...rest] = pathname.split("/");
+  const withoutBase = pathname.startsWith(BASE) ? pathname.slice(BASE.length) : pathname;
+  const [, first, ...rest] = withoutBase.split("/");
   return isLanguage(first) && first !== defaultLanguage
     ? `/${rest.join("/")}`
-    : pathname;
+    : withoutBase;
 }
-// "/posts/" -> "/en/posts/" for English, unchanged for the default language.
+// "/posts/" -> "/arabic-blog/posts/" for default language, or with language prefix
 export function localizePath(lang: Language, path: string): string {
-  if (!path.startsWith("/") || lang === defaultLanguage) return path;
-  return `/${lang}${path}`;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  const localized = lang === defaultLanguage ? normalized : `/${lang}${normalized}`;
+  return `${BASE}${localized}`;
 }
 
 export function translate(
