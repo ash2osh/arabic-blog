@@ -15,11 +15,6 @@ const headerConfig = getHeaderConfig(props.lang);
 const home = localizePath(props.lang, "/");
 // Highlight any "0" in the logo text (e.g. a name like "r0ot").
 const brandParts = headerConfig.title.split(/(0)/).filter(Boolean);
-const otherLanguage = languages.find((value) => value !== props.lang)!;
-const otherLanguageUrl = localizePath(
-  otherLanguage,
-  stripLanguage(props.pathname),
-);
 const isDark = ref(false);
 const isAtTop = ref(true);
 const menuOpen = ref(false);
@@ -92,15 +87,6 @@ onUnmounted(() => {
             t("nav.search")
           }}</span>
         </button>
-        <a
-          class="icon-button language-switch"
-          :href="otherLanguageUrl"
-          :hreflang="otherLanguage"
-          :lang="otherLanguage"
-          :aria-label="`${otherLanguage.toUpperCase()} · ${t('nav.language')}`"
-          :title="t('nav.language')"
-          >{{ otherLanguage.toUpperCase() }}</a
-        >
         <button
           class="icon-button"
           @click="toggle"

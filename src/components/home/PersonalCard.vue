@@ -24,6 +24,7 @@ const postsPath = localizePath(props.lang, "/posts/");
         decoding="async"
     /></a>
     <h2>{{ personalInfo.name }}</h2>
+    <p class="profile-en-name">Ahmed D. Sherif</p>
     <p class="profile-role">{{ personalInfo.role }}</p>
     <div class="profile-stats">
       <a :href="postsPath"
@@ -72,6 +73,13 @@ h2 {
   font-size: 19px;
   font-weight: 600;
   text-align: center;
+}
+.profile-en-name {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  direction: ltr;
 }
 .profile-role {
   margin: 2px 0 16px;

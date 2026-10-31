@@ -35,6 +35,15 @@ export function stripLanguage(pathname: string): string {
 }
 // "/posts/" -> "/arabic-blog/posts/" for default language, or with language prefix
 export function localizePath(lang: Language, path: string): string {
+  if (
+    !path ||
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("//") ||
+    path.startsWith("mailto:")
+  ) {
+    return path;
+  }
   const normalized = path.startsWith("/") ? path : `/${path}`;
   const localized = lang === defaultLanguage ? normalized : `/${lang}${normalized}`;
   return `${BASE}${localized}`;

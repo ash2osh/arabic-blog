@@ -10,62 +10,164 @@ const personalInfo = getPersonalInfo(lang);
 ---
 
 <BlogLayout
-  title={t("about.heroTitle")}
-  description={t("meta.aboutDescription")}
-  heroTitle={t("about.heroTitle")}
+  title={t("about.title")}
+  description={t("site.description")}
+  heroTitle={t("about.title")}
   pageType="ProfilePage"
 >
   <section class="card page-card about-card">
     <div class="about-intro">
       <img
-        {...await getAvatar(84)}
-        width="84"
-        height="84"
+        {...await getAvatar(96)}
+        width="96"
+        height="96"
         alt={personalInfo.name}
       />
       <div>
-        <h2>{t("about.greeting")}</h2>
-        <p>{personalInfo.role}</p>
+        <h2>أحمد شريف</h2>
+        <p class="about-en-name">Ahmed D. Sherif</p>
+        <p class="about-role">Oracle APEX & AI Solutions Architect</p>
       </div>
     </div>
 
-    <p class="about-blog">{t("about.blog")}</p>
+    <div class="about-content">
+      <p class="lead">
+        أهلاً بك في مدونتي التقنية المتخصصة. أعمل كمهندس حلول تقنية متخصص في منظومة <strong>أوراكل أبيكس (Oracle APEX)</strong> وقواعد بيانات أوراكل، مع شغف عميق بتطوير حلول الجيل الجديد المعززة بـ <strong>وكلاء الذكاء الاصطناعي (AI Coding Agents)</strong>.
+      </p>
+
+      <h3>🎯 الهدف من هذه المدونة</h3>
+      <p>
+        تقديم محتوى تقني عربي رفيع المستوى بالأسلوب السهل الممتنع — <em>"العامية التقنية الراقية"</em> — لشرح معمارية الأنظمة المؤسسية الضخمة، حيل الأداء غير الموثقة، وكيفية توظيف الذكاء الاصطناعي في مشاريع الإنتاج الحقيقية دون مبالغات تسويقية.
+      </p>
+
+      <h3>🛠️ مجالات التخصص والاهتمام</h3>
+      <ul class="specialties">
+        <li>
+          <strong>أنظمة الـ Workflows المؤسسية الضخمة:</strong> إدارة ملايين المهام، تصميم كاش الذاكرة عالي السرعة، والاعتمادات الجماعية الفورية داخل Interactive Grids.
+        </li>
+        <li>
+          <strong>هندسة الذكاء الاصطناعي للمطورين:</strong> بناء قواعد المعرفة (AST Knowledge Graphs)، إدارة سياق الـ AI الدائم، وتطوير التطبيقات بالوكلاء الأذكياء بأقل تكلفة استهلاك للتوكنز.
+        </li>
+        <li>
+          <strong>الـ DevOps وأمان الداتابيز:</strong> إجراءات النشر المحكمة عبر SQLcl، عزل بيئات التطوير النظيفة، وممارسات التصدير المعيارية.
+        </li>
+      </ul>
+
+      <h3>🌐 تواصل وتابع أعمالي</h3>
+      <div class="about-links">
+        <a href="https://youtube.com/@orochimaruASH" target="_blank" rel="noopener noreferrer" class="link-pill youtube">
+          <span class="icon-[simple-icons--youtube]"></span>
+          قناة اليوتيوب (@orochimaruASH)
+        </a>
+        <a href="https://www.linkedin.com/in/ahmed-d-sherif" target="_blank" rel="noopener noreferrer" class="link-pill linkedin">
+          <span class="icon-[simple-icons--linkedin]"></span>
+          الملف الشخصي على LinkedIn
+        </a>
+        <a href="https://github.com/ash2osh" target="_blank" rel="noopener noreferrer" class="link-pill github">
+          <span class="icon-[simple-icons--github]"></span>
+          مستودعات GitHub
+        </a>
+        <a href="https://ash2osh.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="link-pill hashnode">
+          <span class="icon-[simple-icons--hashnode]"></span>
+          المدونة الإنجليزية على Hashnode
+        </a>
+      </div>
+    </div>
   </section>
 </BlogLayout>
+
 <style>
+  .about-card {
+    padding: 32px 28px;
+  }
   .about-intro {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--line);
   }
   .about-intro img {
-    width: 84px;
-    height: 84px;
+    width: 96px;
+    height: 96px;
     object-fit: cover;
     border-radius: 50%;
+    border: 3px solid var(--accent);
   }
   .about-intro h2 {
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.25;
-    margin: 2px 0 4px;
-  }
-  .about-intro p {
-    color: var(--accent);
-    font-size: 15px;
     margin: 0;
   }
-  .about-blog {
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 24px 0 0;
+  .about-en-name {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 4px 0 2px;
+    direction: ltr;
+    display: inline-block;
   }
-  @media (max-width: 480px) {
+  .about-role {
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 4px 0 0;
+  }
+  .about-content {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 24px;
+  }
+  .about-content .lead {
+    font-size: 17px;
+    color: var(--text);
+  }
+  .about-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+  }
+  .specialties {
+    padding-inline-start: 24px;
+    margin: 12px 0;
+  }
+  .specialties li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+  .about-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .link-pill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+  @media (max-width: 600px) {
     .about-intro {
       flex-direction: column;
-      align-items: flex-start;
+      text-align: center;
+    }
+    .about-links {
+      flex-direction: column;
     }
   }
 </style>
