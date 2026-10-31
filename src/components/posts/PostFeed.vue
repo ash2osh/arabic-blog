@@ -27,7 +27,8 @@ const query = ref("");
 const page = ref(1);
 const ready = ref(false);
 const feed = ref<HTMLElement>();
-const pageSize = 5;
+const pageSize = 10;
+const order = ref<"desc" | "asc">("desc");
 const categoryNames: readonly string[] = configuredCategories;
 const filtered = computed(() =>
   props.posts.filter(
@@ -42,11 +43,20 @@ const filtered = computed(() =>
           .includes(query.value.trim().toLowerCase())),
   ),
 );
+const sorted = computed(() => {
+  const list = [...filtered.value];
+  return list.sort((a, b) => {
+    const dateComp = b.date.localeCompare(a.date);
+    const idComp = b.id.localeCompare(a.id);
+    const comp = dateComp !== 0 ? dateComp : idComp;
+    return order.value === "desc" ? comp : -comp;
+  });
+});
 const totalPages = computed(() =>
-  Math.max(1, Math.ceil(filtered.value.length / pageSize)),
+  Math.max(1, Math.ceil(sorted.value.length / pageSize)),
 );
 const displayed = computed(() =>
-  filtered.value.slice((page.value - 1) * pageSize, page.value * pageSize),
+  sorted.value.slice((page.value - 1) * pageSize, page.value * pageSize),
 );
 function syncUrl() {
   const url = new URL(window.location.href);
@@ -55,6 +65,7 @@ function syncUrl() {
     tag: tag.value,
     month: month.value,
     q: query.value.trim(),
+    order: order.value !== "desc" ? order.value : "",
     page: page.value > 1 ? String(page.value) : "",
   })) {
     value ? url.searchParams.set(key, value) : url.searchParams.delete(key);
@@ -67,11 +78,18 @@ function readUrl() {
   tag.value = params.get("tag") || "";
   month.value = params.get("month") || "";
   query.value = params.get("q") || "";
+  order.value = params.get("order") === "asc" ? "asc" : "desc";
   const value = Number(params.get("page"));
   page.value =
     Number.isInteger(value) && value > 0
       ? Math.min(value, totalPages.value)
       : 1;
+}
+function setOrder(value: "desc" | "asc") {
+  if (order.value === value) return;
+  order.value = value;
+  page.value = 1;
+  syncUrl();
 }
 function setCategory(value: string) {
   category.value = value;
@@ -114,22 +132,75 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
     <div v-if="archive" class="card archive-intro">
       <span class="eyebrow">{{ t("post.archiveEyebrow") }}</span>
       <h2>{{ t("post.archiveTitle") }}</h2>
-      <p>{{ t("post.archiveIntro", { count: posts.length }) }}</p>
-      <label class="archive-search"
-        ><span class="icon-[lucide--search]"></span
-        ><input
-          v-model="query"
-          @input="search"
-          type="search"
-          :aria-label="t('post.filter')"
-          :placeholder="t('post.filterPlaceholder')"
-      /></label>
+      <p>{{ t("post.archiveIntro", { count: sorted.length }) }}</p>
+      <div class="archive-bar">
+        <label class="archive-search">
+          <span class="icon-[lucide--search]"></span>
+          <input
+            v-model="query"
+            @input="search"
+            type="search"
+            :aria-label="t('post.filter')"
+            :placeholder="t('post.filterPlaceholder')"
+          />
+        </label>
+        <div class="order-toggle" role="group" :aria-label="t('post.sortOrder')">
+          <button
+            type="button"
+            class="order-btn"
+            :class="{ active: order === 'desc' }"
+            @click="setOrder('desc')"
+            :aria-pressed="order === 'desc'"
+            :title="t('post.orderDesc')"
+          >
+            <span class="icon-[lucide--arrow-down-wide-narrow]" aria-hidden="true"></span>
+            <span>{{ t("post.orderDesc") }}</span>
+          </button>
+          <button
+            type="button"
+            class="order-btn"
+            :class="{ active: order === 'asc' }"
+            @click="setOrder('asc')"
+            :aria-pressed="order === 'asc'"
+            :title="t('post.orderAsc')"
+          >
+            <span class="icon-[lucide--arrow-up-narrow-wide]" aria-hidden="true"></span>
+            <span>{{ t("post.orderAsc") }}</span>
+          </button>
+        </div>
+      </div>
     </div>
     <div v-else class="feed-title">
       <h2>{{ t("post.latest") }}</h2>
-      <span class="feed-count">{{
-        t("post.records", { count: posts.length })
-      }}</span>
+      <div class="feed-actions">
+        <div class="order-toggle" role="group" :aria-label="t('post.sortOrder')">
+          <button
+            type="button"
+            class="order-btn"
+            :class="{ active: order === 'desc' }"
+            @click="setOrder('desc')"
+            :aria-pressed="order === 'desc'"
+            :title="t('post.orderDesc')"
+          >
+            <span class="icon-[lucide--arrow-down-wide-narrow]" aria-hidden="true"></span>
+            <span>{{ t("post.orderDesc") }}</span>
+          </button>
+          <button
+            type="button"
+            class="order-btn"
+            :class="{ active: order === 'asc' }"
+            @click="setOrder('asc')"
+            :aria-pressed="order === 'asc'"
+            :title="t('post.orderAsc')"
+          >
+            <span class="icon-[lucide--arrow-up-narrow-wide]" aria-hidden="true"></span>
+            <span>{{ t("post.orderAsc") }}</span>
+          </button>
+        </div>
+        <span class="feed-count">{{
+          t("post.records", { count: sorted.length })
+        }}</span>
+      </div>
     </div>
     <div class="feed-tabs" :aria-label="t('sidebar.categories')">
       <button
@@ -253,7 +324,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
       >
         <span class="icon-[lucide--chevron-right]"></span>
       </button>
-      <span>{{ t("post.total", { count: filtered.length }) }}</span>
+      <span>{{ t("post.total", { count: sorted.length }) }}</span>
     </nav>
   </section>
 </template>
@@ -264,8 +335,8 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 .feed-title {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin: 0 0 10px;
+  align-items: center;
+  margin: 0 0 12px;
 }
 .feed-title h2 {
   font-size: 22px;
@@ -273,9 +344,54 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   line-height: 1.3;
   margin: 0;
 }
+.feed-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 .feed-count {
   font-size: 14px;
   color: var(--muted);
+}
+.archive-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.archive-bar .archive-search {
+  flex: 1;
+}
+.order-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  gap: 3px;
+}
+.order-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.order-btn:hover {
+  color: var(--text);
+}
+.order-btn.active {
+  color: var(--text);
+  background: var(--line);
+  font-weight: 600;
 }
 .feed-tabs {
   display: flex;
@@ -501,6 +617,26 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   color: var(--muted);
 }
 @media (max-width: 760px) {
+  .feed-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .feed-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .archive-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .order-toggle {
+    width: 100%;
+  }
+  .order-btn {
+    flex: 1;
+    justify-content: center;
+  }
   .feed-tabs {
     gap: 18px;
   }
