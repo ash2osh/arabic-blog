@@ -94,7 +94,7 @@ my-apex-project/
 
 ```markdown
 # تطبيق 100: بوابة إدارة الطلبات والمبيعات
-- **إصدار أبيكس المستهدف**: APEX 24.1 (Universal Theme)
+- **إصدار أبيكس المستهدف**: APEX 26.1 (Universal Theme)
 - **المصادقة الأساسية**: نظام مصادقة مخصص (`PKG_AUTH.AUTHENTICATE`)
 - **خطط الصلاحيات (Authorization Schemes)**:
   - `AUTH_ADMIN`: بيتطلب دور `ROLE_ADMIN` في جدول `APP_USERS`

@@ -122,7 +122,7 @@ END;
 
 ```text
 ORA-20987: APEX - Security Group ID (your workspace identity) is invalid.
-ORA-06512: at "APEX_240200.WWV_FLOW_SECURITY", line 3145
+ORA-06512: at "APEX_260100.WWV_FLOW_SECURITY", line 3145
 ```
 
 والسبب بسيط جداً:
