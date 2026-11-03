@@ -7,7 +7,7 @@ featured: false
 hashnode_draft_id: ""
 image: /arabic-blog/covers/025_the-zero-flicker-secret-apex-pre-paint-bootstrap.jpg
 lang: ar
-original_english_url: https://ash2osh.hashnode.dev/025_the-zero-flicker-secret-apex-pre-paint-bootstrap
+original_english_url: https://ash2osh.hashnode.dev/the-zero-flicker-secret-apex-pre-paint-bootstrap
 tags:
 - oracle-apex
 - javascript
@@ -17,7 +17,7 @@ tags:
 title: "سر الوميض الصفري: القضاء على الفلاش الأبيض بتمهيد Page 0 في Oracle APEX ⚡🎭"
 ---
 
-> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/025_the-zero-flicker-secret-apex-pre-paint-bootstrap).
+> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-zero-flicker-secret-apex-pre-paint-bootstrap).
 
 # سر الوميض الصفري: القضاء على الفلاش الأبيض بتمهيد Page 0 في Oracle APEX ⚡🎭
 
@@ -139,7 +139,7 @@ window.APEX_THEME_FACTORY_CONFIG = {
 المطور بيفتح **Page 0 (Global Page)** ويعمل منطقة محتوى ثابت (Static Content Region) ويحط فيها الكود، ويختار موضع القالب:
 `#BANNER#` (أو رأس الصفحة Top of Page).
 
-يجرب الصفحات الرئيسية (صفحة 1، صفحة 5، صفحة 10).. يلاقي النمط المظلم شغال بدون وميض وبسرعة الصاروخ، ويفرح جداً!
+يجرب الشاشات والتقارير الرئيسية العادية.. يلاقي النمط المظلم شغال بدون وميض وبسرعة الصاروخ، ويفرح جداً!
 
 وفجأة، مستخدم يدوس على زرار يفتح **نافذة منبثقة (Modal Dialog)** عشان يعدل بيانات عميل.. 
 

@@ -7,7 +7,7 @@ featured: false
 hashnode_draft_id: ""
 image: /arabic-blog/covers/024_the-scoping-fortress-eliminating-apex-css-collisions.jpg
 lang: ar
-original_english_url: https://ash2osh.hashnode.dev/024_the-scoping-fortress-eliminating-apex-css-collisions
+original_english_url: https://ash2osh.hashnode.dev/the-scoping-fortress-eliminating-apex-css-collisions
 tags:
 - oracle-apex
 - css
@@ -17,7 +17,7 @@ tags:
 title: "قلعة العزل الحصينة: إزاي html.app-theme-* بيقضي على فوضى الـ CSS في Oracle APEX 🏰🛡️"
 ---
 
-> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/024_the-scoping-fortress-eliminating-apex-css-collisions).
+> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-scoping-fortress-eliminating-apex-css-collisions).
 
 # قلعة العزل الحصينة: إزاي html.app-theme-* بيقضي على فوضى الـ CSS في Oracle APEX 🏰🛡️
 
@@ -29,7 +29,7 @@ title: "قلعة العزل الحصينة: إزاي html.app-theme-* بيقضي
 
 > تخيل عمارة سكنية فخمة فيها 100 شقة، والمهندس العبقري اللي بناها قرر يوفر تكاليف الأسلاك، فعمل مفتاح كهرباء عمومي واحد كبير في مدخل العمارة تحت! جه الساكن اللي في شقة 4B حب يقرا كتاب الساعة 2 بعد منتصف الليل، فنزل داس على المفتاح العمومي.. وفجأة: أنوار الديسكو ولعت، وخلاطات المطابخ اشتغلت، ورشاشات الحريق رشت مياه على كل السكان في الـ 100 شقة في نفس اللحظة!
 >
-> دي بالضبط المأساة اللي بتحصل لما تكتب أكواد CSS عامة أو تعدل متغيرات الـ `:root` في **Oracle APEX**. بتكون فاكر إنك بتعدل حواف جدول تقارير تفاعلي في صفحة رقم 12، فتتفاجئ إنك بوظت ألوان النوافذ المنبثقة (Modal Dialogs) وقوائم التنقل في صفحة رقم 1!
+> دي بالضبط المأساة اللي بتحصل لما تكتب أكواد CSS عامة أو تعدل متغيرات الـ `:root` في **Oracle APEX**. بتكون فاكر إنك بتعدل حواف جدول تقارير تفاعلي في شاشة جدول التقارير التفاعلي، فتتفاجئ إنك بوظت ألوان النوافذ المنبثقة (Modal Dialogs) وقوائم التنقل في الشاشة الرئيسية!
 >
 > في الجزء التاني من سلسلتنا **APEX Theme Factory**، هنبني **قلعة العزل الحصينة**. هنتعلم إزاي نبني هيكل متغيرات CSS ثلاثي الطبقات معزول تماماً تحت كلاس `html.app-theme-<name>`، ونتحكم في أسبقية التنسيق (Specificity) من غير ولا علامة `!important` واحدة، ونحمي تجربة الاستخدام بحاجز تقليل الحركة، ونتفادى الفخ القاتل اللي بيمسح أيقونات Font APEX ويحولها لمربعات مكسورة. 🚀
 
@@ -167,16 +167,16 @@ html.app-theme-carbon-volt body.apex-theme-iris {
 
 * * *
 
-## ♿ درع إمكانية الوصول: حماية تقليل الحركة بقوة (0,3,0)
+## ♿ درع إمكانية الوصول: حماية تقليل الحركة بأعلى أسبقية تنسيق
 
 في أنظمة الشركات الكبرى، معايير إمكانية الوصول (Accessibility) إلزامية قانونياً وتقنياً. المستخدمين اللي بيعانوا من حساسية الحركة أو مشاكل التوازن ممكن يتعبوا جداً من الحركات والتأثيرات الانتقالية السريعة.
 
 إزاي نجبر كل الثيمات إنها تحترم إعداد تقليل الحركة `prefers-reduced-motion` من غير ما نعتمد على ضمير مصمم الثيم؟
 
-بنستخدم محدد CSS بقوة حسابية صارمة تبلغ **(0, 3, 0)**:
+بنستخدم محدد CSS مضاعف الفئات (:root:root) عشان نضمن أسبقية تنسيق قاطعة:
 
 ```css
-/* درع الأساس: يتفوق حسابياً على أي كلاس فرعي html.app-theme-* بقوة (0,2,0) */
+/* درع الأساس: يتفوق حسابياً على أي كلاس فرعي للثيمات */
 @media (prefers-reduced-motion: reduce) {
   :root:root[class*="app-theme-"] {
     --app-motion-duration: 0ms !important;

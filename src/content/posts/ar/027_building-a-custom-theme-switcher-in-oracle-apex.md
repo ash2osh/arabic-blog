@@ -7,7 +7,7 @@ featured: false
 hashnode_draft_id: ""
 image: /arabic-blog/covers/027_building-a-custom-theme-switcher-in-oracle-apex.jpg
 lang: ar
-original_english_url: https://ash2osh.hashnode.dev/027_building-a-custom-theme-switcher-in-oracle-apex
+original_english_url: https://ash2osh.hashnode.dev/building-a-custom-theme-switcher-in-oracle-apex
 tags:
 - oracle-apex
 - javascript
@@ -17,7 +17,7 @@ tags:
 title: "بناء أداة تبديل الثيمات المخصصة في Oracle APEX: ودجز الواجهة، Alpine.js، وعناصر النماذج 🎛️✨"
 ---
 
-> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/027_building-a-custom-theme-switcher-in-oracle-apex).
+> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/building-a-custom-theme-switcher-in-oracle-apex).
 
 # بناء أداة تبديل الثيمات المخصصة في Oracle APEX: ودجز الواجهة، Alpine.js، وعناصر النماذج 🎛️✨
 
@@ -137,7 +137,7 @@ apex.jQuery(window)
 عايز تبني واجهة شيك وعصرية جوه شاشة الملف الشخصي للمستخدم؟ تقدر تعمل أزرار كبسولات (Pills) تفاعلية باستخدام مكتبة **Alpine.js 3.x** جوه منطقة محتوى ثابت في أبيكس:
 
 ```html
-<!-- حط الكود ده جوه Static Content Region في صفحة رقم 10 -->
+<!-- حط الكود ده جوه Static Content Region في شاشة إعدادات المستخدم أو الملف الشخصي -->
 <div x-data="themePicker()" class="app-theme-picker">
   <label class="app-theme-picker__label">تخصيص المظهر البصري:</label>
   <div class="app-theme-picker__group">

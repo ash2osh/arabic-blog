@@ -7,7 +7,7 @@ featured: false
 hashnode_draft_id: ""
 image: /arabic-blog/covers/028_enterprise-theme-persistence-in-oracle-apex.jpg
 lang: ar
-original_english_url: https://ash2osh.hashnode.dev/028_enterprise-theme-persistence-in-oracle-apex
+original_english_url: https://ash2osh.hashnode.dev/enterprise-theme-persistence-in-oracle-apex
 tags:
 - oracle-apex
 - plsql
@@ -17,7 +17,7 @@ tags:
 title: "حفظ الثيمات على مستوى المؤسسة في Oracle APEX: قاعدة البيانات، الملفات الشخصية، والوميض الصفري 🏨🔐"
 ---
 
-> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/028_enterprise-theme-persistence-in-oracle-apex).
+> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/enterprise-theme-persistence-in-oracle-apex).
 
 # حفظ الثيمات على مستوى المؤسسة في Oracle APEX: قاعدة البيانات، الملفات الشخصية، والوميض الصفري 🏨🔐
 
@@ -270,7 +270,7 @@ window.APEX_THEME_FACTORY_CONFIG = {
 على مدار المقالات الستة دي، سافرنا سوا من عشوائية التنسيقات التقليدية الملحومة، لحد ما بنينا محرك تصميم عالمي يليق بكبرى الشركات:
 
 * **المقال 023: بدلة الحرباء** — الهروب من قيود Theme Roller وبناء حزم ثيمات مستقلة فوق Universal Theme 42.
-* **المقال 024: قلعة العزل الحصينة** — معمارية التوكنز ثلاثية الطبقات، حماية الحركة بقوة `(0,3,0)`، وإنقاذ أيقونات Font APEX.
+* **المقال 024: قلعة العزل الحصينة** — معمارية التوكنز ثلاثية الطبقات، حماية الحركة بأعلى أسبقية تنسيق`(0,3,0)`، وإنقاذ أيقونات Font APEX.
 * **المقال 025: سر الوميض الصفري** — القضاء التام على وميض الشاشات المزعج في أقل من 2 ميلي ثانية وتغطية النوافذ المنبثقة.
 * **المقال 026: ماكينة الحزم المحمولة** — تجميع خطوط WOFF2 بدون اعتمادات خارجية، والترقيع الذري لملفات APEXLang مع أمان التراجع.
 * **المقال 027: بناء أداة تبديل الثيمات** — اعتراض قائمة Navigation Bar، والتحكم في روابط الـ Hash، وتصميم أزرار Alpine.js العصرية.

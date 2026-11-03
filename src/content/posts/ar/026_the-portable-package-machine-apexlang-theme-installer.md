@@ -7,7 +7,7 @@ featured: false
 hashnode_draft_id: ""
 image: /arabic-blog/covers/026_the-portable-package-machine-apexlang-theme-installer.jpg
 lang: ar
-original_english_url: https://ash2osh.hashnode.dev/026_the-portable-package-machine-apexlang-theme-installer
+original_english_url: https://ash2osh.hashnode.dev/the-portable-package-machine-apexlang-theme-installer
 tags:
 - oracle-apex
 - devops
@@ -17,7 +17,7 @@ tags:
 title: "ماكينة الحزم المحمولة: ملفات الـ ZIP المعزولة وترقيع APEXLang التلقائي 📦⚙️"
 ---
 
-> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/026_the-portable-package-machine-apexlang-theme-installer).
+> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-portable-package-machine-apexlang-theme-installer).
 
 # ماكينة الحزم المحمولة: ملفات الـ ZIP المعزولة وترقيع APEXLang التلقائي 📦⚙️
 
