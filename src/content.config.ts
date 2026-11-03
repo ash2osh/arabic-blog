@@ -23,7 +23,7 @@ const posts = defineCollection({
     image: z.string().optional(),
     heroImage: z.string().optional(),
     cover_image: z.string().optional(),
-    hashnode_draft_id: z.string().optional(),
+    hashnode_draft_id: z.string().nullable().optional(),
     original_english_url: z.string().optional(),
     series: z.string().optional(),
     series_slug: z.string().optional(),

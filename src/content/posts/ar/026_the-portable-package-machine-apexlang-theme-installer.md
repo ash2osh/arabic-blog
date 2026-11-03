@@ -4,7 +4,7 @@ date: '2026-11-06'
 description: الجزء الرابع من سلسلة APEX Theme Factory. إزاي بنجمع الثيمات في حزم ZIP معزولة، وترقيع ملفات APEXLang بدقة ذرية، وضمانات التراجع التلقائي بدون فقدان البيانات.
 draft: false
 featured: false
-hashnode_draft_id: null
+hashnode_draft_id: ""
 image: /arabic-blog/covers/026_the-portable-package-machine-apexlang-theme-installer.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/026_the-portable-package-machine-apexlang-theme-installer

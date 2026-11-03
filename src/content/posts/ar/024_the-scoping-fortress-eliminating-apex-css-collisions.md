@@ -4,7 +4,7 @@ date: '2026-11-04'
 description: الجزء الثاني من سلسلة APEX Theme Factory. إزاي نبني قلعة عزل محكمة باستخدام كلاسات html.app-theme-* ونتحكم في المتغيرات بدون !important ونتجنب فخ مسح أيقونات Font APEX.
 draft: false
 featured: false
-hashnode_draft_id: null
+hashnode_draft_id: ""
 image: /arabic-blog/covers/024_the-scoping-fortress-eliminating-apex-css-collisions.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/024_the-scoping-fortress-eliminating-apex-css-collisions

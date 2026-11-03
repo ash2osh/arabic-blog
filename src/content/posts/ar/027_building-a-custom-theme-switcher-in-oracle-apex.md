@@ -4,7 +4,7 @@ date: '2026-11-07'
 description: الجزء الخامس من سلسلة APEX Theme Factory. إزاي نبني أداة تبديل ثيمات حديثة، واستخدام روابط الـ Hash لتفادي أخطاء الـ Checksum، وربط مكونات Alpine.js وعناصر نماذج أبيكس.
 draft: false
 featured: false
-hashnode_draft_id: null
+hashnode_draft_id: ""
 image: /arabic-blog/covers/027_building-a-custom-theme-switcher-in-oracle-apex.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/027_building-a-custom-theme-switcher-in-oracle-apex

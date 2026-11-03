@@ -4,7 +4,7 @@ date: '2026-11-08'
 description: الجزء السادس (مسك الختام) من سلسلة APEX Theme Factory. إزاي نربط تفضيلات الثيم بحساب المستخدم (:APP_USER) في قاعدة البيانات، واستدعاءات Ajax، وحقن الكلاس في الصفحة الأولى بدون وميض.
 draft: false
 featured: false
-hashnode_draft_id: null
+hashnode_draft_id: ""
 image: /arabic-blog/covers/028_enterprise-theme-persistence-in-oracle-apex.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/028_enterprise-theme-persistence-in-oracle-apex

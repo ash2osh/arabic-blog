@@ -4,7 +4,7 @@ date: '2026-11-05'
 description: الجزء الثالث من سلسلة APEX Theme Factory. إزاي نقضي تماماً على الوميض الأبيض المزعج في النمط المظلم باستخدام كود تمهيد متزامن في Page 0 وحل لغز النوافذ المنبثقة.
 draft: false
 featured: false
-hashnode_draft_id: null
+hashnode_draft_id: ""
 image: /arabic-blog/covers/025_the-zero-flicker-secret-apex-pre-paint-bootstrap.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/025_the-zero-flicker-secret-apex-pre-paint-bootstrap

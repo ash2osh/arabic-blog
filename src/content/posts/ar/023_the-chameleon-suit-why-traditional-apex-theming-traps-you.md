@@ -4,7 +4,7 @@ date: '2026-11-03'
 description: الجزء الأول من سلسلة APEX Theme Factory. إزاي نتحرر من فخ الـ Theme Roller ونبني أنظمة تصميم معيارية قابلة للتبديل الفوري وبدون كسر قوالب Universal Theme 42.
 draft: false
 featured: false
-hashnode_draft_id: null
+hashnode_draft_id: ""
 image: /arabic-blog/covers/023_the-chameleon-suit-why-traditional-apex-theming-traps-you.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/023_the-chameleon-suit-why-traditional-apex-theming-traps-you
