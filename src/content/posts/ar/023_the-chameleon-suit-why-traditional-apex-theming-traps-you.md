@@ -7,7 +7,7 @@ featured: false
 hashnode_draft_id: ""
 image: /arabic-blog/covers/023_the-chameleon-suit-why-traditional-apex-theming-traps-you.jpg
 lang: ar
-original_english_url: https://ash2osh.hashnode.dev/the-chameleon-suit-why-traditional-apex-theming-traps-you
+original_english_url: https://ash2osh.hashnode.dev/the-chameleon-suit-why-traditional-oracle-apex-theming-traps-you-and-how-to-break-free
 tags:
 - oracle-apex
 - css
@@ -17,7 +17,7 @@ tags:
 title: "بدلة الحرباء: ليه تخصيص الثيمات التقليدي في Oracle APEX بيحبسك؟ (وإزاي تفلت منه) 🦎👔"
 ---
 
-> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-chameleon-suit-why-traditional-apex-theming-traps-you).
+> 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-chameleon-suit-why-traditional-oracle-apex-theming-traps-you-and-how-to-break-free).
 
 # بدلة الحرباء: ليه تخصيص الثيمات التقليدي في Oracle APEX بيحبسك؟ (وإزاي تفلت منه) 🦎👔
 
