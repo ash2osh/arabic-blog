@@ -18,6 +18,21 @@ const t = useTranslations(getLanguageFromPath(Astro.url.pathname));
       </a>
     </div>
   </div>
+  <script is:inline>
+    // Automatic self-healing redirect for URLs where an underscore was stripped by LinkedIn or external clients
+    (function () {
+      var path = window.location.pathname;
+      var match = path.match(/^(.*\/posts\/)(\d{3})([a-zA-Z].*)$/);
+      if (match) {
+        var base = match[1];
+        var num = match[2];
+        var rest = match[3];
+        if (!rest.endsWith("/")) rest += "/";
+        var target = base + num + "_" + rest;
+        window.location.replace(target);
+      }
+    })();
+  </script>
 </BaseLayout>
 <style>
   .missing-page {

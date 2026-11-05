@@ -38,6 +38,22 @@ const newest = (/** @type {string} */ prefix) =>
     .map(([, date]) => date)
     .sort((a, b) => b.valueOf() - a.valueOf())[0];
 
+// Dynamic static redirects for URLs stripped of their prefix underscore
+// (e.g. LinkedIn API Little Text parser stripping "_" from "/posts/011_...")
+/** @type {Record<string, string>} */
+const redirects = {};
+const arPostsDir = "./src/content/posts/ar";
+if (existsSync(arPostsDir)) {
+  for (const file of readdirSync(arPostsDir).filter((name) => name.endsWith(".md"))) {
+    const slug = file.replace(/\.md$/, "");
+    const match = /^(\d{3})_(.+)$/.exec(slug);
+    if (match) {
+      const [, num, rest] = match;
+      redirects[`/posts/${num}${rest}/`] = `${base}/posts/${slug}/`;
+    }
+  }
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: siteUrl,
@@ -48,6 +64,7 @@ export default defineConfig({
   build: { inlineStylesheets: "always" },
   prefetch: { prefetchAll: true, defaultStrategy: "hover" },
   experimental: { clientPrerender: true },
+  redirects: redirects,
   integrations: [
     vue(),
     sitemap({
