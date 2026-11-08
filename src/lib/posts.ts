@@ -31,7 +31,12 @@ export function summarize(post: CollectionEntry<"posts">): PostSummary {
     ...post.data,
     date: post.data.date.toISOString().slice(0, 10),
     minutes: readingMinutes(post.body ?? "", post.data.lang),
-    cover: ((post.data as any).image || firstImage(post.body ?? "")) ?? "",
+    cover:
+      ((post.data as any).image ||
+        (post.data as any).heroImage ||
+        (post.data as any).cover_image ||
+        firstImage(post.body ?? "")) ??
+      "",
   };
 }
 // First Markdown image in the body: ![alt](url).
