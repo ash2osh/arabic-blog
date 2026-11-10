@@ -9,13 +9,14 @@ hashnode_draft_id: 6ad869726a8f4c4ef76f03f5
 image: /arabic-blog/covers/002_lock-down-your-database-foolproof-sqlcl-connections-safety-guards.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/lock-down-your-database-foolproof-sqlcl-connections-safety-guards
+series_part: 2
 tags:
 - oracle-apex
 - sqlcl
 - database
 - security
 - arabic
-title: 'اقفل على الداتابيز بالضبة والمفتاح: اتصالات SQLcl الآمنة وحراس الحماية 🛡️🔐'
+title: "اقفل على الداتابيز بالضبة والمفتاح: اتصالات SQLcl الآمنة وحراس الحماية \U0001F6E1️\U0001F510"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/lock-down-your-database-foolproof-sqlcl-connections-safety-guards).

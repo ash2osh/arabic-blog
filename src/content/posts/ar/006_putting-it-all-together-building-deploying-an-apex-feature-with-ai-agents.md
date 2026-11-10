@@ -9,13 +9,14 @@ hashnode_draft_id: 6ad8697a271729564d17678e
 image: /arabic-blog/covers/006_putting-it-all-together-building-deploying-an-apex-feature-with-ai-agents.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/putting-it-all-together-building-deploying-an-apex-feature-with-ai-agents
+series_part: 6
 tags:
 - oracle-apex
 - ai
 - devops
 - ci-cd
 - arabic
-title: 'تجميع الخيوط: بناء ونشر ميزة APEX كاملة مع الـ AI Agents من الألف للياء 🚀🎉'
+title: "تجميع الخيوط: بناء ونشر ميزة APEX كاملة مع الـ AI Agents من الألف للياء \U0001F680\U0001F389"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/putting-it-all-together-building-deploying-an-apex-feature-with-ai-agents).

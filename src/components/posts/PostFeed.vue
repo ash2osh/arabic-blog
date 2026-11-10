@@ -258,6 +258,8 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
             ><a
               :href="`${postsPath}?category=${encodeURIComponent(post.category)}`"
               >{{ label(post.category) }}</a
+            ><span v-if="post.series_part" class="series-badge"
+              >{{ t("series.part", { count: post.series_part }) }}</span
             ><span class="meta-divider">/</span
             ><time :datetime="post.date">{{
               formatDate(lang, post.date)
@@ -476,6 +478,20 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 .post-kicker a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.series-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 .pin {
   display: inline-flex;

@@ -10,6 +10,7 @@ hashnode_draft_id: 6ad869856b57c4a59e29ba29
 image: /arabic-blog/covers/011_the-cleanroom-split-why-code-mirror-and-ai-staging-never-mix.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-cleanroom-split-why-your-code-mirror-and-ai-staging-must-never-mix
+series_part: 5
 tags:
 - oracle-apex
 - ai

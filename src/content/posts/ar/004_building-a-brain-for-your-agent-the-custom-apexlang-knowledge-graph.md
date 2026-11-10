@@ -9,13 +9,14 @@ hashnode_draft_id: 6ad869769043ff40e2dccdaf
 image: /arabic-blog/covers/004_building-a-brain-for-your-agent-the-custom-apexlang-knowledge-graph.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/building-a-brain-for-your-agent-the-custom-apexlang-knowledge-graph
+series_part: 4
 tags:
 - oracle-apex
 - ai
 - knowledge-graph
 - ast
 - arabic
-title: 'ابني مخ حقيقي للـ Agent بتاعك: الـ APEXlang Knowledge Graph المخصص 🗺️🧠'
+title: "ابني مخ حقيقي للـ Agent بتاعك: الـ APEXlang Knowledge Graph المخصص \U0001F5FA️\U0001F9E0"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/building-a-brain-for-your-agent-the-custom-apexlang-knowledge-graph).

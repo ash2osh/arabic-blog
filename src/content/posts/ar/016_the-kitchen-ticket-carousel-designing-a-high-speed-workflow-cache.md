@@ -10,6 +10,7 @@ hashnode_draft_id: 6ad8698fb7abc8958ad96d45
 image: /arabic-blog/covers/016_the-kitchen-ticket-carousel-designing-a-high-speed-workflow-cache.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-kitchen-ticket-carousel-designing-a-high-speed-workflow-cache
+series_part: 2
 tags:
 - oracle-apex
 - workflows

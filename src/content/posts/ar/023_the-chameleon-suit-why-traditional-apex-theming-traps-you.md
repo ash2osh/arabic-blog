@@ -1,20 +1,23 @@
 ---
 category: apex-theme-factory
 date: '2026-11-03'
-description: الجزء الأول من سلسلة APEX Theme Factory. إزاي نتحرر من فخ الـ Theme Roller ونبني أنظمة تصميم معيارية قابلة للتبديل الفوري وبدون كسر قوالب Universal Theme 42.
+description: الجزء الأول من سلسلة APEX Theme Factory. إزاي نتحرر من فخ الـ Theme Roller
+  ونبني أنظمة تصميم معيارية قابلة للتبديل الفوري وبدون كسر قوالب Universal Theme 42.
 draft: false
 featured: false
-hashnode_draft_id: ""
+hashnode_draft_id: ''
 image: /arabic-blog/covers/023_the-chameleon-suit-why-traditional-apex-theming-traps-you.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-chameleon-suit-why-traditional-oracle-apex-theming-traps-you-and-how-to-break-free
+series_part: 1
 tags:
 - oracle-apex
 - css
 - design-system
 - webdev
 - arabic
-title: "بدلة الحرباء: ليه تخصيص الثيمات التقليدي في Oracle APEX بيحبسك؟ (وإزاي تفلت منه) 🦎👔"
+title: "بدلة الحرباء: ليه تخصيص الثيمات التقليدي في Oracle APEX بيحبسك؟ (وإزاي تفلت
+  منه) \U0001F98E\U0001F454"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-chameleon-suit-why-traditional-oracle-apex-theming-traps-you-and-how-to-break-free).

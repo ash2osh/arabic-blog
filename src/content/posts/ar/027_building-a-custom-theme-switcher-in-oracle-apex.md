@@ -1,20 +1,24 @@
 ---
 category: apex-theme-factory
 date: '2026-11-07'
-description: الجزء الخامس من سلسلة APEX Theme Factory. إزاي نبني أداة تبديل ثيمات حديثة، واستخدام روابط الـ Hash لتفادي أخطاء الـ Checksum، وربط مكونات Alpine.js وعناصر نماذج أبيكس.
+description: الجزء الخامس من سلسلة APEX Theme Factory. إزاي نبني أداة تبديل ثيمات
+  حديثة، واستخدام روابط الـ Hash لتفادي أخطاء الـ Checksum، وربط مكونات Alpine.js
+  وعناصر نماذج أبيكس.
 draft: false
 featured: false
-hashnode_draft_id: ""
+hashnode_draft_id: ''
 image: /arabic-blog/covers/027_building-a-custom-theme-switcher-in-oracle-apex.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/building-a-custom-theme-switcher-in-oracle-apex
+series_part: 5
 tags:
 - oracle-apex
 - javascript
 - alpinejs
 - ui-design
 - arabic
-title: "بناء أداة تبديل الثيمات المخصصة في Oracle APEX: ودجز الواجهة، Alpine.js، وعناصر النماذج 🎛️✨"
+title: "بناء أداة تبديل الثيمات المخصصة في Oracle APEX: ودجز الواجهة، Alpine.js، وعناصر
+  النماذج \U0001F39B️✨"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/building-a-custom-theme-switcher-in-oracle-apex).

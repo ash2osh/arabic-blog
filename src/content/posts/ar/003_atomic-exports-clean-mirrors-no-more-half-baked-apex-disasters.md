@@ -9,13 +9,14 @@ hashnode_draft_id: 6ad869741d7a01b5589babd4
 image: /arabic-blog/covers/003_atomic-exports-clean-mirrors-no-more-half-baked-apex-disasters.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/atomic-exports-clean-mirrors-no-more-half-baked-apex-disasters
+series_part: 3
 tags:
 - oracle-apex
 - sqlcl
 - git
 - devops
 - arabic
-title: 'تصدير ذري ومرايات نظيفة: ودّع كوابيس الـ APEX نص-المستوية! 🧳✨'
+title: "تصدير ذري ومرايات نظيفة: ودّع كوابيس الـ APEX نص-المستوية! \U0001F9F3✨"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/atomic-exports-clean-mirrors-no-more-half-baked-apex-disasters).

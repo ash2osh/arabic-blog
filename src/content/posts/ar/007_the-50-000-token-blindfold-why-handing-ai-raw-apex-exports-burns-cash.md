@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad8697c6b57c4a59e29b9b2
 image: /arabic-blog/covers/007_the-token-trap-why-handing-ai-raw-apex-exports-burns-cash.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-50-000-token-blindfold-why-handing-ai-raw-apex-exports-burns-cash
+series_part: 1
 tags:
 - oracle-apex
 - ai

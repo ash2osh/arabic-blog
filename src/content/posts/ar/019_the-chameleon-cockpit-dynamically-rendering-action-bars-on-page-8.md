@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad869946b57c4a59e29bae4
 image: /arabic-blog/covers/019_the-chameleon-cockpit-dynamically-rendering-action-bars-on-page-8.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-chameleon-cockpit-dynamically-rendering-action-bars-in-oracle-apex
+series_part: 5
 tags:
 - oracle-apex
 - plsql

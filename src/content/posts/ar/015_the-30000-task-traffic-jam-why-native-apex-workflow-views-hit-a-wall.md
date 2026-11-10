@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad8698c1d7a01b5589bac7e
 image: /arabic-blog/covers/015_the-30000-task-traffic-jam-why-native-apex-workflow-views-hit-a-wall.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-30-000-task-traffic-jam-why-native-apex-workflow-views-hit-a-wall
+series_part: 1
 tags:
 - oracle-apex
 - workflows

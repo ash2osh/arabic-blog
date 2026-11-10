@@ -10,6 +10,7 @@ hashnode_draft_id: 6ad869872939f2047a44d832
 image: /arabic-blog/covers/012_the-day-one-briefing-giving-your-agent-permanent-memory-with-app-context.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-day-one-briefing-giving-your-ai-permanent-memory-with-app-context
+series_part: 6
 tags:
 - oracle-apex
 - ai

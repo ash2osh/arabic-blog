@@ -1,20 +1,23 @@
 ---
 category: apex-theme-factory
 date: '2026-11-05'
-description: الجزء الثالث من سلسلة APEX Theme Factory. إزاي نقضي تماماً على الوميض الأبيض المزعج في النمط المظلم باستخدام كود تمهيد متزامن في Page 0 وحل لغز النوافذ المنبثقة.
+description: الجزء الثالث من سلسلة APEX Theme Factory. إزاي نقضي تماماً على الوميض
+  الأبيض المزعج في النمط المظلم باستخدام كود تمهيد متزامن في Page 0 وحل لغز النوافذ
+  المنبثقة.
 draft: false
 featured: false
-hashnode_draft_id: ""
+hashnode_draft_id: ''
 image: /arabic-blog/covers/025_the-zero-flicker-secret-apex-pre-paint-bootstrap.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-zero-flicker-secret-apex-pre-paint-bootstrap
+series_part: 3
 tags:
 - oracle-apex
 - javascript
 - performance
 - webdev
 - arabic
-title: "سر الوميض الصفري: القضاء على الفلاش الأبيض بتمهيد Page 0 في Oracle APEX ⚡🎭"
+title: "سر الوميض الصفري: القضاء على الفلاش الأبيض بتمهيد Page 0 في Oracle APEX ⚡\U0001F3AD"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-zero-flicker-secret-apex-pre-paint-bootstrap).

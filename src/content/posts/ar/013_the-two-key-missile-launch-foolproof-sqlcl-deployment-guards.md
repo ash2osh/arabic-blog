@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad869896b57c4a59e29ba7e
 image: /arabic-blog/covers/013_the-two-key-missile-launch-foolproof-sqlcl-deployment-guards.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-two-key-missile-launch-foolproof-sqlcl-deployment-guards
+series_part: 7
 tags:
 - oracle-apex
 - sqlcl

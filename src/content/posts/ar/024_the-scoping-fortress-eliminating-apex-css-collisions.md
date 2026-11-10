@@ -1,20 +1,24 @@
 ---
 category: apex-theme-factory
 date: '2026-11-04'
-description: الجزء الثاني من سلسلة APEX Theme Factory. إزاي نبني قلعة عزل محكمة باستخدام كلاسات html.app-theme-* ونتحكم في المتغيرات بدون !important ونتجنب فخ مسح أيقونات Font APEX.
+description: الجزء الثاني من سلسلة APEX Theme Factory. إزاي نبني قلعة عزل محكمة باستخدام
+  كلاسات html.app-theme-* ونتحكم في المتغيرات بدون !important ونتجنب فخ مسح أيقونات
+  Font APEX.
 draft: false
 featured: false
-hashnode_draft_id: ""
+hashnode_draft_id: ''
 image: /arabic-blog/covers/024_the-scoping-fortress-eliminating-apex-css-collisions.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-scoping-fortress-eliminating-apex-css-collisions
+series_part: 2
 tags:
 - oracle-apex
 - css
 - webdev
 - design-system
 - arabic
-title: "قلعة العزل الحصينة: إزاي html.app-theme-* بيقضي على فوضى الـ CSS في Oracle APEX 🏰🛡️"
+title: "قلعة العزل الحصينة: إزاي html.app-theme-* بيقضي على فوضى الـ CSS في Oracle
+  APEX \U0001F3F0\U0001F6E1️"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-scoping-fortress-eliminating-apex-css-collisions).

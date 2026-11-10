@@ -9,13 +9,14 @@ hashnode_draft_id: 6ad869783388693599924504
 image: /arabic-blog/covers/005_context-that-never-forgets-durable-memory-with-app-context-agent-rules.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/context-that-never-forgets-durable-memory-with-app-context-agent-rules
+series_part: 5
 tags:
 - oracle-apex
 - ai
 - context
 - prompt-engineering
 - arabic
-title: 'كونتكست مبيتنسيش: الذاكرة الدائمة بفولدر app_context/ وقواعد الـ Agents 📓☕'
+title: "كونتكست مبيتنسيش: الذاكرة الدائمة بفولدر app_context/ وقواعد الـ Agents \U0001F4D3☕"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/context-that-never-forgets-durable-memory-with-app-context-agent-rules).

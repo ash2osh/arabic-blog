@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad8697f2939f2047a44d7f6
 image: /arabic-blog/covers/008_from-monolith-to-modular-why-apexlang-files-change-everything.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/from-monolith-to-modular-why-apexlang-files-change-everything
+series_part: 2
 tags:
 - oracle-apex
 - ai

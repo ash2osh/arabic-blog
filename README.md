@@ -1,143 +1,108 @@
-# Grimorio
+# مدونة أحمد شريف التقنية | Ahmed Sherif Technical Blog 🚀
 
-A fast, bilingual blog theme for Astro, built for writing of any kind: guides, notes, essays, or a dev log. English and Spanish out of the box, light/dark themes, full-text search, and social images generated at build time. No client-side framework runs the page: Vue powers only the few interactive islands, everything else ships as static HTML.
+> **المدونة الهندسية المتخصصة في أوراكل أبيكس، وكلاء الذكاء الاصطناعي، والأنظمة المؤسسية الضخمة بالعامية التقنية الراقية.**
 
-**[Live demo](https://grimorio-astro.pages.dev)** · built with [Astro](https://astro.build), [Vue](https://vuejs.org) and [Tailwind CSS](https://tailwindcss.com).
+[![Live Blog](https://img.shields.io/badge/Live%20Blog-ash2osh.github.io%2Farabic--blog-059669?style=for-the-badge&logo=astro&logoColor=white)](https://ash2osh.github.io/arabic-blog/)
+[![Hashnode](https://img.shields.io/badge/Hashnode%20Mirror-ash2osh.hashnode.dev-2962FF?style=for-the-badge&logo=hashnode&logoColor=white)](https://ash2osh.hashnode.dev/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ahmed%20Sherif-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-d-sherif)
+[![YouTube](https://img.shields.io/badge/YouTube-@orochimaruASH-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@orochimaruASH)
 
-> Grimorio ships with example posts and copy so you can see every feature working. Replace them with your own — see [Make it yours](#make-it-yours).
-
-## Features
-
-- **Bilingual.** English at `/`, Spanish at `/es/`, with a language switch that keeps you on the same page. Change the default or add/drop a language from one config file.
-- **Writing-first.** Markdown posts with categories, tags, a monthly archive, and pagination. Pair a post across languages by giving both files the same name.
-- **Search.** Client-side full-text search over every post, opened with `Ctrl` / `⌘ + K`.
-- **Light and dark.** Theme toggle that respects the system preference and `prefers-reduced-motion`, with no flash on load.
-- **Generated images.** Each post gets a 1200×630 social card and a wide hero banner rendered from its title and category at build time — no design work per post. Drop an image in `src/assets/banners/` to override the banner for a specific post.
-- **SEO without the busywork.** Per-page canonical URLs, `hreflang`, Open Graph and Twitter tags, JSON-LD structured data, a `sitemap.xml` with real `lastmod` dates, per-language RSS, `robots.txt`, and an `llms.txt` summary for AI crawlers.
-- **Fast by default.** Static output, inlined critical CSS, hover prefetching, and self-hosted fonts. A clean build scores 100 across the board in Lighthouse.
-- **Tested.** A Playwright suite covers navigation, search, theming, i18n, and metadata on both desktop and mobile viewports.
-
-## Tech stack
-
-Astro 7 · Vue 3 (islands only) · Tailwind CSS 4 · TypeScript · Satori + Sharp for image generation · Playwright for tests.
-
-## Quick start
-
-You need **Node.js 24** (22.12 minimum) and **pnpm 10.33**.
-
-```sh
-pnpm install --frozen-lockfile
-pnpm dev
-```
-
-Open <http://localhost:4321>.
-
-| Command         | What it does                                    |
-| --------------- | ----------------------------------------------- |
-| `pnpm dev`      | Start the dev server                            |
-| `pnpm build`    | Type-check, then build to `dist/`               |
-| `pnpm preview`  | Serve the production build locally              |
-| `pnpm check`    | Type-check Astro, Vue, and TypeScript           |
-| `pnpm test`     | Build and run the browser tests                 |
-| `pnpm format`   | Format the codebase with Prettier               |
-
-## Project structure
-
-```
-src/
-├─ assets/            Avatar (and optional per-post banner overrides)
-├─ components/        Vue islands + Astro layout pieces
-├─ content/posts/     Your posts, as es/ and en/ Markdown
-├─ data/              Category and projects data
-├─ i18n/              UI strings (es.json, en.json) + language config
-├─ layouts/           Base and blog layouts
-├─ lib/               Image generation, post helpers
-├─ pages/             Routes, feeds, sitemap, OG/banner endpoints
-└─ styles/global.css  Theme colors and base styles
-public/               Favicons, fonts, static SVGs
-```
-
-## Make it yours
-
-Everything you'll normally touch lives in a handful of files:
-
-| What                        | Where                                                    |
-| --------------------------- | -------------------------------------------------------- |
-| Site name, author, nav, links | `src/site.config.json`                                 |
-| All interface text          | `src/i18n/es.json`, `src/i18n/en.json`                   |
-| Avatar                      | `src/assets/avatar.jpg` (optimized WebP is generated)    |
-| Theme colors                | `src/styles/global.css` (`:root` and `:root.dark`)       |
-| Posts                       | `src/content/posts/es/`, `src/content/posts/en/`         |
-| Projects page               | `src/data/projects.ts`                                   |
-| Production domain           | `SITE_URL` in `.env` (see `.env.example`)                |
-
-After cloning, delete the example posts in `src/content/posts/` and the favicons in `public/` you want to replace, then set your domain so the canonical URLs, feeds, sitemap, and social images point at the right place.
-
-### Writing a post
-
-Create `src/content/posts/<lang>/<slug>.md`. Use the **same slug** in `es/` and `en/` so the language switch links the two versions.
-
-```yaml
 ---
-title: "My post"
-description: "One or two sentences. Used for SEO and the social card."
-date: 2026-09-20
-lang: en # must match the folder
-category: notes # guides | notes | stories
-tags: ["Guides", "Astro"]
-featured: false # featured posts are highlighted on the home page
-draft: false # drafts are excluded from the build
-updated: 2026-10-01 # optional: last-reviewed date, used in the sitemap
+
+## 🌐 روابط الوصول المباشر (Quick Access)
+
+* 🌐 **الرابط المباشر للمدونة العربية:** [https://ash2osh.github.io/arabic-blog/](https://ash2osh.github.io/arabic-blog/)
+* 📚 **تصفح جميع المقالات:** [https://ash2osh.github.io/arabic-blog/posts/](https://ash2osh.github.io/arabic-blog/posts/)
+* 🇬🇧 **النسخة الإنجليزية الأصلية (Hashnode):** [https://ash2osh.hashnode.dev/](https://ash2osh.hashnode.dev/)
+* 📦 **مستودع قالب أوراكل أبيكس للذكاء الاصطناعي:** [APEX Project Template on GitHub](https://github.com/ash2osh/APEX_PROJECT_TEMPLATE)
+
 ---
+
+## 📖 سلاسل المقالات المنشورة (Series Catalog)
+
+تتميز المدونة بسلاسل معمارية متكاملة مقسمة إلى أجزاء تسلسلية عملية:
+
+### 1. 🤖 مطور أبيكس المعزز بالذكاء الاصطناعي (AI-Augmented APEX Developer)
+> **7 أجزاء متسلسلة** تبني نموذج تشغيل مؤسسي كامل لدمج وكلاء الذكاء الاصطناعي مع أوراكل أبيكس.
+* **رابط السلسلة:** [تصفح السلسلة كاملة على المدونة](https://ash2osh.github.io/arabic-blog/posts/?category=ai-augmented-apexdeveloper)
+* **الأجزاء:**
+  * **الجزء 1:** العماوة التوكنية (50,000 توكن): ليه تصدير التطبيقات الخام بيحرق ميزانيتك؟
+  * **الجزء 2:** من المونوليث إلى الموديولار: ليه ملفات `apexlang` بتغير قواعد اللعبة؟
+  * **الجزء 3:** رسم ناطحة السحاب: بناء شجرة الـ AST وشبكة المعرفة لأوراكل أبيكس.
+  * **الجزء 4:** سياق بلا هدر: استعلام اعتمادات أبيكس بذكاء عبر `Graphify`.
+  * **الجزء 5:** العزل الصارم (Cleanroom): الفصل الحاسم بين مرآة الكود ومنطقة تجارب الذكاء الاصطناعي.
+  * **الجزء 6:** تلقين اليوم الأول: تزويد الذكاء الاصطناعي بذاكرة مستدامة عبر `App Context`.
+  * **الجزء 7:** إطلاق الصاروخ بمفتاحين: حواجز النشر الصارمة عبر `SQLcl` لحماية قواعد البيانات.
+
+---
+
+### 2. ⚡ إدارة الـ Workflows الضخمة (Enterprise Workflows at Scale)
+> **7 أجزاء متسلسلة** في المعمارية الهندسية لإدارة ومعالجة عشرات الآلاف من المهام في أنظمة أوراكل أبيكس المؤسسية.
+* **رابط السلسلة:** [تصفح السلسلة كاملة على المدونة](https://ash2osh.github.io/arabic-blog/posts/?category=enterprise-workflows)
+* **الأجزاء:**
+  * **الجزء 1:** أزمة الـ 30,000 مهمة: ليه استعلام الـ Views الأصلية في أبيكس بيخنق الأداء؟
+  * **الجزء 2:** كاش تذاكر المطبخ: تصميم محرك كاش فائق السرعة لمهام سير العمل.
+  * **الجزء 3:** المزامنة بالأحداث: الحفاظ على طزاجة الكاش بنسبة 100% عبر الـ Triggers.
+  * **الجزء 4:** وداعاً للأزرار الثابتة: تخزين أفعال الواجهة كصفوف داخل قاعدة البيانات.
+  * **الجزء 5:** قمرة القيادة الحربية: بناء شريط أفعال ديناميكي (Dynamic Action Bar) في صفحة 8.
+  * **الجزء 6:** الختم بالدفعة: اعتمادات بنقرة واحدة في شبكات الـ Interactive Grid.
+  * **الجزء 7:** نظافة الربيع في أبيكس 26: أرشفة تاريخية للمهام بدون كسر سجلات التدقيق (Audits).
+
+---
+
+### 3. 🎨 أنظمة التصميم و APEX Theme Factory
+> **6 أجزاء متسلسلة** في بناء أنظمة تصميم قابلة للتخصيص والتبديل الحي على Universal Theme 42.
+* **رابط السلسلة:** [تصفح السلسلة كاملة على المدونة](https://ash2osh.github.io/arabic-blog/posts/?category=apex-theme-factory)
+* **الأجزاء:**
+  * **الجزء 1:** بدلة الحرباء: ليه الـ Theming التقليدي في أبيكس فخ؟
+  * **الجزء 2:** قلعة النطاقات (Scoping Fortress): القضاء التام على تصادمات الـ CSS.
+  * **الجزء 3:** سر الصفر وميض: التمهيد قبل الرسم (Zero-Flicker Pre-Paint Bootstrap).
+  * **الجزء 4:** ماكينة الحزم المحمولة: مثبت ثيمات أبيكس بلغة `apexlang`.
+  * **الجزء 5:** بناء مبدل ثيمات مخصص بضغطة زر داخل التطبيق.
+  * **الجزء 6:** استدامة الثيمات المؤسسية وحفظ التفضيلات عبر الجلسات وقاعدة البيانات.
+
+---
+
+### 4. 🛡️ قالب مشروع أوراكل أبيكس للذكاء الاصطناعي (APEX Project Template)
+> **6 أجزاء متسلسلة** لتأسيس دورة حياة التطوير الآمن والتحكم الدقيق في وكلاء الذكاء الاصطناعي.
+* **رابط السلسلة:** [تصفح السلسلة كاملة على المدونة](https://ash2osh.github.io/arabic-blog/posts/?category=apex-project-template)
+* **الأجزاء:**
+  * **الجزء 1:** قالب أبيكس الذي يضع وكلاء البرمجة على مقود قصير.
+  * **الجزء 2:** إحكام إغلاق قاعدة البيانات: حراس أمان اتصالات `SQLcl`.
+  * **الجزء 3:** التصدير الذري والمرآة النظيفة لإنهاء كوارث التصدير الناقص.
+  * **الجزء 4:** بناء عقل لوكيلك: شبكة المعرفة المخصصة لـ `apexlang`.
+  * **الجزء 5:** سياق لا ينسى: الذاكرة الدائمة عبر قواعد الوكيل وسياق التطبيق.
+  * **الجزء 6:** جمع الصورة كاملة: بناء ونشر ميزة في أبيكس بمساعدة وكلاء الذكاء الاصطناعي.
+
+---
+
+## 🛠️ المعمارية التقنية للمدونة (Architecture & Tech Stack)
+
+* **محرك الموقع:** [Astro](https://astro.build) مع جزر تفاعلية عبر [Vue 3](https://vuejs.org) و [Tailwind CSS](https://tailwindcss.com).
+* **دعم اللغة العربية والـ BiDi:** خط `IBM Plex Sans Arabic` مع عزل الكود البرمجي LTR وحماية نصوص الـ Markdown من التداخل ثنائي الاتجاه.
+* **حصانة روابط لينكد إن والـ Redirects:** تحويلات تلقائية ومعالجة ذاتية للأخطاء (Self-Healing 404) ضد اختزال الـ Underscore في معيار Microsoft Little Text.
+* **النشر الآلي:** خط سير تلقائي بالكامل عبر **GitHub Actions** على [GitHub Pages](https://pages.github.com/).
+
+---
+
+## 💻 التشغيل المحلي والتطوير (Local Development)
+
+```bash
+# تثبيت الاعتماديات
+npm install
+
+# تشغيل خادم التطوير المحلي
+npm run dev
+
+# بناء النسخة الثابتة للإنتاج
+npm run build
+
+# معاينة البناء محلياً
+npm run preview
 ```
 
-The body is standard Markdown: headings, tables, fenced code (with a copy button and syntax highlighting), blockquotes, and images all work. For diagrams, drop an SVG in `public/` and reference it with a `<figure class="diagram">`.
+---
 
-### Renaming categories
-
-The three example categories are `guides`, `notes`, and `stories`. To change them, edit the list in `src/data/post-options.ts`, the enum in `src/content.config.ts`, and the `category.*` labels in both `src/i18n/*.json`.
-
-### Changing languages
-
-Languages are declared in `src/i18n/index.ts` (`languages` and `defaultLanguage`). To run the site in a single language, keep one entry; to swap the default, change `defaultLanguage`. Keep the sitemap locales in `astro.config.mjs` in sync.
-
-## Deployment
-
-The site is fully static — any host that serves a folder works (Cloudflare Pages, Netlify, Vercel, GitHub Pages, a plain bucket). Set `SITE_URL` to your production origin before building so metadata is correct.
-
-### Cloudflare Pages
-
-1. Push the repo to GitHub.
-2. In Cloudflare: **Workers & Pages → Create → Pages → Connect to Git** and pick the repo.
-3. Build settings:
-
-   | Field                  | Value        |
-   | ---------------------- | ------------ |
-   | Framework preset       | Astro        |
-   | Build command          | `pnpm build` |
-   | Build output directory | `dist`       |
-
-4. Add `SITE_URL=https://yourdomain.com` under **Settings → Environment variables**, then add your domain under **Custom domains**.
-
-Cloudflare reads the Node version from `.node-version` and pnpm from `package.json`. Every push to `main` ships a new version.
-
-## Submitting to Astro Themes
-
-Grimorio is ready to list on [astro.build/themes](https://astro.build/themes). Before you submit:
-
-1. Deploy it somewhere public and put that URL in the README and in `package.json` (`homepage`).
-2. Add a preview screenshot to the repo (a `1200×630` image works well).
-3. Make sure the repo is public and keeps the `LICENSE` file.
-4. Submit through the form linked at the top of [astro.build/themes](https://astro.build/themes).
-
-## Credits
-
-Grimorio is based on [Kanade-Astro](https://github.com/sudoriaa/Kanade-Astro) by sudoriaa, reworked and extended (design, i18n defaults, content, and features).
-
-IBM Plex Sans and IBM Plex Mono are used under the SIL Open Font License; the license texts live in `public/fonts/licenses/`.
-
-The example post images are photos from [Unsplash](https://unsplash.com) (via Lorem Picsum), free to use under the Unsplash License. Replace them with your own in `public/covers/`.
-
-## License
-
-[MIT](./LICENSE).
+## ⚖️ الترخيص (License)
+جميع الحقوق والمقالات محفوظة للمهندس **أحمد شريف (Ahmed Sherif)** © 2026.
+كود المنصة وقالب العرض مرخص تحت رخصة [MIT](./LICENSE).

@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad86983338869359992453d
 image: /arabic-blog/covers/010_zero-waste-context-querying-apex-dependencies-with-graphify.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/zero-waste-context-querying-apex-dependencies-with-graphify
+series_part: 4
 tags:
 - oracle-apex
 - ai

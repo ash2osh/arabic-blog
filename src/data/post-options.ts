@@ -14,6 +14,19 @@ export const categoryNames = [
 
 export type Category = (typeof categoryNames)[number];
 
+export const seriesCategories = [
+  "ai-augmented-apexdeveloper",
+  "enterprise-workflows",
+  "apex-theme-factory",
+  "apex-project-template",
+] as const;
+
+export type SeriesCategory = (typeof seriesCategories)[number];
+
+export function isSeriesCategory(category: string): boolean {
+  return (seriesCategories as readonly string[]).includes(category);
+}
+
 export const categoryLabels: Record<string, Record<string, string>> = {
   ar: {
     "ai-augmented-apexdeveloper": "مطور أبيكس المعزز بالذكاء الاصطناعي",

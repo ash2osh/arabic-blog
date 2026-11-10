@@ -27,6 +27,7 @@ const posts = defineCollection({
     original_english_url: z.string().optional(),
     series: z.string().optional(),
     series_slug: z.string().optional(),
+    series_part: z.number().optional(),
   }),
 });
 export const collections = { posts };

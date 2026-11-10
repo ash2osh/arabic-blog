@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad869916b57c4a59e29bac8
 image: /arabic-blog/covers/017_event-driven-cache-sync-keeping-your-task-cache-fresh-with-triggers.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/event-driven-cache-sync-keeping-your-task-cache-100-fresh
+series_part: 3
 tags:
 - oracle-apex
 - workflows

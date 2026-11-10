@@ -9,13 +9,14 @@ hashnode_draft_id: cmvhuwh8w000002p756iwcbh8
 image: /arabic-blog/covers/001_an-oracle-apex-template-that-keeps-coding-agents-on-a-short-leash.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/an-oracle-apex-template-that-keeps-coding-agents-on-a-short-leash
+series_part: 1
 tags:
 - oracle-apex
 - ai
 - coding-agents
 - database
 - arabic
-title: قالب أوراكل أبيكس يفرمل الـ AI Coding Agents ويخليهم تحت السيطرة 🐕⚡
+title: "قالب أوراكل أبيكس يفرمل الـ AI Coding Agents ويخليهم تحت السيطرة \U0001F415⚡"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/an-oracle-apex-template-that-keeps-coding-agents-on-a-short-leash).

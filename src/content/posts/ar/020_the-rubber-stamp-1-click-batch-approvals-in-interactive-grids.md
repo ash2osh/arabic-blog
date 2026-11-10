@@ -9,6 +9,7 @@ hashnode_draft_id: 6ad869962939f2047a44d876
 image: /arabic-blog/covers/020_the-rubber-stamp-1-click-batch-approvals-in-interactive-grids.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-rubber-stamp-1-click-batch-approvals-in-interactive-grids
+series_part: 6
 tags:
 - oracle-apex
 - interactive-grid

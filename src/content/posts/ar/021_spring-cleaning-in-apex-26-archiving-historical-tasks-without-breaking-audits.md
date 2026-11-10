@@ -10,6 +10,7 @@ hashnode_draft_id: 6ad869981d7a01b5589bacdf
 image: /arabic-blog/covers/021_spring-cleaning-in-apex-26-archiving-historical-tasks-without-breaking-audits.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/spring-cleaning-in-apex-26-archiving-historical-tasks-without-breaking-audits
+series_part: 7
 tags:
 - oracle-apex
 - workflows

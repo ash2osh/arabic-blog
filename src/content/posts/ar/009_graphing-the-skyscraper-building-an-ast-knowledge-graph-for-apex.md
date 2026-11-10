@@ -10,6 +10,7 @@ hashnode_draft_id: 6ad869811d7a01b5589bac4a
 image: /arabic-blog/covers/009_graphing-the-skyscraper-building-an-ast-knowledge-graph-for-apex.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/graphing-the-skyscraper-building-an-ast-knowledge-graph-for-apex
+series_part: 3
 tags:
 - oracle-apex
 - ai

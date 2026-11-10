@@ -10,6 +10,7 @@ hashnode_draft_id: 6ad869921d7a01b5589bacbc
 image: /arabic-blog/covers/018_goodbye-hardcoded-buttons-storing-ui-actions-in-database-rows.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/goodbye-hardcoded-buttons-storing-ui-actions-in-database-rows
+series_part: 4
 tags:
 - oracle-apex
 - lowcode

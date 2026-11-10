@@ -42,6 +42,13 @@ const summary = summarize(post);
 const index = posts.findIndex((item) => item.id === getPostId(post));
 const newer = posts[index - 1];
 const older = posts[index + 1];
+
+const isSeries = Boolean(summary.series_part !== undefined || post.data.series);
+const seriesPosts = isSeries
+  ? posts
+      .filter((p) => p.category === post.data.category && p.series_part !== undefined)
+      .sort((a, b) => (a.series_part ?? 0) - (b.series_part ?? 0))
+  : [];
 ---
 
 <BaseLayout
@@ -66,12 +73,19 @@ const older = posts[index + 1];
         {t("article.back")}
       </a>
       <header class="article-header">
-        <a
-          class="chip"
-          href={`${postsPath}?category=${encodeURIComponent(post.data.category)}`}
-        >
-          {categoryLabel(lang, post.data.category)}
-        </a>
+        <div class="article-chips">
+          <a
+            class="chip"
+            href={`${postsPath}?category=${encodeURIComponent(post.data.category)}`}
+          >
+            {categoryLabel(lang, post.data.category)}
+          </a>
+          {summary.series_part && (
+            <span class="chip series-chip">
+              {t("series.part", { count: summary.series_part })}
+            </span>
+          )}
+        </div>
         <h1>{post.data.title}</h1>
         <div class="article-meta">
           <img
@@ -169,6 +183,39 @@ const older = posts[index + 1];
     </article>
     <aside class="article-sidebar">
       <PersonalCard posts={posts} lang={lang} avatar={await getAvatar(64)} />
+      {seriesPosts.length > 0 && (
+        <nav class="card panel series-nav" aria-label={t("series.title")}>
+          <div class="series-nav-header">
+            <span class="icon-[lucide--layers] series-icon" aria-hidden="true"></span>
+            <div class="series-header-text">
+              <span class="series-eyebrow">{t("series.title")}</span>
+              <a
+                href={`${postsPath}?category=${encodeURIComponent(post.data.category)}`}
+                class="series-category-link"
+              >
+                {categoryLabel(lang, post.data.category)}
+              </a>
+            </div>
+          </div>
+          <ol class="series-nav-list">
+            {seriesPosts.map((item) => {
+              const isCurrent = item.id === getPostId(post);
+              return (
+                <li class:list={[{ current: isCurrent }]}>
+                  <a
+                    href={`${postsPath}${item.id}/`}
+                    class:list={["series-nav-item", { active: isCurrent }]}
+                    aria-current={isCurrent ? "page" : undefined}
+                  >
+                    <span class="series-nav-part">{t("series.part", { count: item.series_part })}</span>
+                    <span class="series-nav-title">{item.title}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
+      )}
       <nav class="card panel toc" aria-label={t("article.toc")}>
         <h2 class="panel-title">
           <span class="icon-[lucide--list]" aria-hidden="true"></span>
@@ -279,8 +326,19 @@ const older = posts[index + 1];
   .article-header {
     padding-top: 22px;
   }
+  .article-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
   .article-header .chip {
     color: var(--accent);
+  }
+  .series-chip {
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+    font-weight: 600;
   }
   .article-header h1 {
     font-size: 32px;
@@ -325,6 +383,90 @@ const older = posts[index + 1];
     flex-direction: column;
     gap: 16px;
     align-self: stretch;
+  }
+  .series-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .series-nav-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .series-icon {
+    font-size: 20px;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .series-header-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .series-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  .series-category-link {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.4;
+    transition: color 0.15s ease;
+  }
+  .series-category-link:hover {
+    color: var(--accent);
+  }
+  .series-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .series-nav-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm, 6px);
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.4;
+    transition: all 0.15s ease;
+    border-inline-start: 2px solid transparent;
+  }
+  .series-nav-item:hover {
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    color: var(--text);
+  }
+  .series-nav-item.active {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    color: var(--text);
+    font-weight: 500;
+    border-inline-start-color: var(--accent);
+  }
+  .series-nav-part {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .series-nav-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .toc {
     position: sticky;

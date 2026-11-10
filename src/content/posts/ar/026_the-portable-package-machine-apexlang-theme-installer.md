@@ -1,20 +1,23 @@
 ---
 category: apex-theme-factory
 date: '2026-11-06'
-description: الجزء الرابع من سلسلة APEX Theme Factory. إزاي بنجمع الثيمات في حزم ZIP معزولة مع دعم كامل لـ PowerShell وإصداري أوراكل أبيكس 26.1 و 26.2، وترقيع APEXLang بدقة ذرية، وضمانات التراجع التلقائي بدون فقدان البيانات.
+description: الجزء الرابع من سلسلة APEX Theme Factory. إزاي بنجمع الثيمات في حزم ZIP
+  معزولة مع دعم كامل لـ PowerShell وإصداري أوراكل أبيكس 26.1 و 26.2، وترقيع APEXLang
+  بدقة ذرية، وضمانات التراجع التلقائي بدون فقدان البيانات.
 draft: false
 featured: false
-hashnode_draft_id: ""
+hashnode_draft_id: ''
 image: /arabic-blog/covers/026_the-portable-package-machine-apexlang-theme-installer.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/the-portable-package-machine-apexlang-theme-installer
+series_part: 4
 tags:
 - oracle-apex
 - devops
 - automation
 - python
 - arabic
-title: "ماكينة الحزم المحمولة: ملفات الـ ZIP المعزولة وترقيع APEXLang التلقائي 📦⚙️"
+title: "ماكينة الحزم المحمولة: ملفات الـ ZIP المعزولة وترقيع APEXLang التلقائي \U0001F4E6⚙️"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/the-portable-package-machine-apexlang-theme-installer).

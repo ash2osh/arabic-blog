@@ -1,20 +1,24 @@
 ---
 category: apex-theme-factory
 date: '2026-11-08'
-description: الجزء السادس (مسك الختام) من سلسلة APEX Theme Factory. إزاي نربط تفضيلات الثيم بحساب المستخدم (:APP_USER) في قاعدة البيانات، واستدعاءات Ajax، وحقن الكلاس في الصفحة الأولى بدون وميض.
+description: الجزء السادس (مسك الختام) من سلسلة APEX Theme Factory. إزاي نربط تفضيلات
+  الثيم بحساب المستخدم (:APP_USER) في قاعدة البيانات، واستدعاءات Ajax، وحقن الكلاس
+  في الصفحة الأولى بدون وميض.
 draft: false
 featured: false
-hashnode_draft_id: ""
+hashnode_draft_id: ''
 image: /arabic-blog/covers/028_enterprise-theme-persistence-in-oracle-apex.jpg
 lang: ar
 original_english_url: https://ash2osh.hashnode.dev/enterprise-theme-persistence-in-oracle-apex
+series_part: 6
 tags:
 - oracle-apex
 - plsql
 - database
 - security
 - arabic
-title: "حفظ الثيمات على مستوى المؤسسة في Oracle APEX: قاعدة البيانات، الملفات الشخصية، والوميض الصفري 🏨🔐"
+title: "حفظ الثيمات على مستوى المؤسسة في Oracle APEX: قاعدة البيانات، الملفات الشخصية،
+  والوميض الصفري \U0001F3E8\U0001F510"
 ---
 
 > 🇬🇧 **English Version:** Read the original article in English [here](https://ash2osh.hashnode.dev/enterprise-theme-persistence-in-oracle-apex).
